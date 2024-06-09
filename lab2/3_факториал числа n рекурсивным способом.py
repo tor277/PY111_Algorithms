@@ -10,10 +10,10 @@ def factorial_recursive(n: int) -> int:
 
     if isinstance(n, float):
         if n % 1 != 0:
-            raise TypeError("Только положительные целые числа")
+            raise TypeError("Только не отрицательные целые числа")
 
     if not isinstance(n, int) or n < 0:
-        raise ValueError("Только положительные целые числа")
+        raise ValueError("Только не отрицательные целые числа")
 
     if n == 0:
         return 1

@@ -7,7 +7,7 @@ def factorial_iterative(n: int) -> int:
     """
     ...  # TODO реализовать итеративный алгоритм нахождения факториала
     if n < 0:
-        raise ValueError("Только положительные целые числа")
+        raise ValueError("Только не отрицательные целые числа")
 
     n_ = 1
     for i in range(1, n + 1):
