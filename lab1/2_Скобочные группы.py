@@ -7,14 +7,26 @@ def check_brackets(brackets_row: str) -> bool:
     """
     ...  # TODO реализовать проверку скобочной группы
 
+    # stack = []
+    #
+    # for bracket in brackets_row:
+    #     if bracket == '(':
+    #         stack.append(bracket)
+    #     elif bracket == ')':
+    #         if not stack or stack.pop() != '(':
+    #             return False
+    #
+    # return not stack
+
     stack = []
 
     for bracket in brackets_row:
         if bracket == '(':
             stack.append(bracket)
-        elif bracket == ')':
-            if not stack or stack.pop() != '(':
-                return False
+        elif bracket == ')' and stack:
+            stack.pop()
+        else:
+            return False
 
     return not stack
 
